@@ -1,3 +1,4 @@
+
 # Brooklyn Housing Analysis
 
 Housing in the contemporary era has always provided a vast and diverse set of data. By looking at housing prices within Brooklyn, New York, we can adequately assess the housing market using a variety of tools.
@@ -23,3 +24,5 @@ SciKitLearn is the ML library we'll be using to create a classifier.
 
 ### Dashboard
 Tableau will be used to display a dashboard/story.
+
+
