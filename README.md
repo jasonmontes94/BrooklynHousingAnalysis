@@ -3,6 +3,10 @@
 
 Housing in the contemporary era has always provided a vast and diverse set of data. By looking at housing prices within Brooklyn, New York, we can adequately assess the housing market using a variety of tools.
 
+
+## Data
+Data used in analysis was Brooklyn property sales from 2003-2017 sourced from kaggle.com by Tommy Wu. Original data was taken from the City of New York and cleaned up to be used for analysis.
+
 ## Reasearch Questions
 
 - Can we predict future home prices in Brooklyn based on the year that the home was bought?
