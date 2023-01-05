@@ -1,0 +1,178 @@
+Scenario: You are given a CSV file downloaded from Kaggle and are asked to create a machine learning model of residential home sales for Brooklyn Neighborhoods.
+
+Analysis: The CSV is very large (110 columns and hundreds of thousands of records. You decide to filter the CSV into a more manageable dataset. You also decide to import the CSV file into a Postgres database and use Jupyter Notebook for your machine learning model.
+
+Database: 
+
+So that you do not lose any data points you decide to import the entire CSV into Postgres. Because a schema of datatypes does not exist, you need to create one from scratch. Some data types can be visually understood, but other cannot. A decision to make them CHAR (255) data types was made with the idea that these data types can be formatted in a View later on. (see Create Table Statement in the Addendum).
+
+Working with your data analysis team, a decision was made to filter the data further into a single neighborhood (Mill Basin) and only residential purchases (building_class_category = 01, 02, and 03). The initial modeling did not provide workable data. The data team further refined the view to format the sale_price field into an integer (see Create View Statement in the Addendum).
+
+Using Jupyter Notebook you created a connection to the database so that the rest of the team could then build the machine learning model. (see Connection Statement in the Addendum)
+
+
+Addendum:
+
+Create Table Statement - 
+CREATE TABLE Brookly_Sales_Map (
+         id                                                    INT,
+         borough_id                                            INT,
+         neighborhood                                          CHAR(255),
+         building_class_category                               CHAR(255),
+         tax_class                                             CHAR(255),
+         block                                                 INT,
+         lot                                                   INT,
+         easement                                              CHAR(255),
+         building_class                                        CHAR(255),
+         address                                               CHAR(255),
+         apartment_number                                      CHAR(255),
+         zip_code                                              CHAR(255),
+         residential_units                                     CHAR(255),
+         commercial_units                                      CHAR(255),
+         total_units                                           CHAR(255),
+         land_sqft                                             CHAR(255),
+         gross_sqft                                            CHAR(255),
+         year_built                                            INT,
+         tax_class_at_sale                                     INT,
+         building_class_at_sale                                CHAR(255),
+         sale_price                                            CHAR(255),
+         sale_date                                             CHAR(255),
+         year_of_sale                                          INT,
+         borough_name                                          CHAR(255),
+         CD                                                    CHAR(255),
+         CT2010                                                CHAR(255),
+         CB2010                                                CHAR(255),
+         SchoolDist                                            CHAR(255),
+         Council                                               CHAR(255),
+         zipcode1                                              CHAR(255),
+         FireComp                                              CHAR(255),
+         PolicePrct                                            CHAR(255),
+         HealthCent                                            CHAR(255),
+         HealthArea                                            CHAR(255),
+         SanitBoro                                             CHAR(255),
+         SanitDistr                                            CHAR(255),
+         SanitSub                                              CHAR(255),
+         address1                                              CHAR(255),
+         ZoneDist1                                             CHAR(255),
+         ZoneDist2                                             CHAR(255),
+         ZoneDist3                                             CHAR(255),
+         ZoneDist4                                             CHAR(255),
+         Overlay1                                              CHAR(255),
+         Overlay2                                              CHAR(255),
+         SPDist1                                               CHAR(255),
+         SPDist2                                               CHAR(255),
+         SPDist3                                               CHAR(255),
+         LtdHeight                                             CHAR(255),
+         SplitZone                                             CHAR(255),
+         BldgClass                                             CHAR(255),
+         LandUse                                               CHAR(255),
+         Easements                                             CHAR(255),
+         OwnerType                                             CHAR(255),
+         OwnerName                                             CHAR(255),
+         LotArea                                               CHAR(255),
+         BldgArea                                              CHAR(255),
+         ComArea                                               CHAR(255),
+         ResArea                                               CHAR(255),
+         OfficeArea                                            CHAR(255),
+         RetailArea                                            CHAR(255),
+         GarageArea                                            CHAR(255),
+         StrgeArea                                             CHAR(255),
+         FactryArea                                            CHAR(255),
+         OtherArea                                             CHAR(255),
+         AreaSource                                            CHAR(255),
+         NumBldgs                                              CHAR(255),
+         NumFloors                                             CHAR(255),
+         UnitsRes                                              CHAR(255),
+         UnitsTotal                                            CHAR(255),
+         LotFront                                              CHAR(255),
+         LotDepth                                              CHAR(255),
+         BldgFront                                             CHAR(255),
+         BldgDepth                                             CHAR(255),
+         Ext                                                   CHAR(255),
+         ProxCode                                              CHAR(255),
+         IrrLotCode                                            CHAR(255),
+         LotType                                               CHAR(255),
+         BsmtCode                                              CHAR(255),
+         AssessLand                                            CHAR(255),
+         AssessTot                                             CHAR(255),
+         ExemptLand                                            CHAR(255),
+         ExemptTot                                             CHAR(255),
+         YearBuilt                                             CHAR(255),
+         YearAlter1                                            CHAR(255),
+         YearAlter2                                            CHAR(255),
+         HistDist                                              CHAR(255),
+         Landmark                                              CHAR(255),
+         BuiltFAR                                              CHAR(255),
+         ResidFAR                                              CHAR(255),
+         CommFAR                                               CHAR(255),
+         FacilFAR                                              CHAR(255),
+         BoroCode                                              CHAR(255),
+         BBL                                                   CHAR(255),
+         CondoNo                                               CHAR(255),
+         Tract2010                                             CHAR(255),
+         XCoord                                                CHAR(255),
+         YCoord                                                CHAR(255),
+         ZoneMap                                               CHAR(255),
+         ZMCode                                                CHAR(255),
+         Sanborn                                               CHAR(255),
+         TaxMap                                                CHAR(255),
+         EDesigNum                                             CHAR(255),
+         APPBBL                                                CHAR(255),
+         APPDate                                               CHAR(255),
+         PLUTOMapID                                            CHAR(255),
+         FIRM07_FLA                                            CHAR(255),
+         PFIRM15_FL                                            CHAR(255),
+         Version                                               CHAR(255),
+         MAPPLUTO_F                                            CHAR(255),
+         SHAPE_Leng                                            CHAR(255),
+         SHAPE_Area                                            CHAR(255)
+);
+
+Create View Statement - 
+CREATE VIEW vw_millbasin4 AS 
+	SELECT neighborhood,
+		building_class_category,
+		tax_class,
+		easement,
+		address,
+		residential_units,
+		gross_sqft,
+		year_built,
+		cast(replace(sale_price,',','')::numeric as integer) as saleprice,
+		cd,
+		ct2010,
+		cb2010,
+		schooldist,
+		address1,
+		year_of_sale
+	FROM brookly_sales_map
+	WHERE neighborhood='MILL BASIN' 
+		and (left(building_class_category,2)='01'
+		or left(building_class_category,2)='02'
+		or left(building_class_category,2)='03');
+
+Connection Statement - 
+# Example python program to read data from a PostgreSQL table
+# and load into a pandas DataFrame
+
+import psycopg2
+import pandas as pd
+from sqlalchemy import create_engine
+
+# Create an engine instance
+alchemyEngine = create_engine('postgresql+psycopg2://jay:final@127.0.0.1/FinalProjectDB', pool_recycle=3600);
+
+# Connect to PostgreSQL server
+dbConnection = alchemyEngine.connect();
+
+# select * from vw_neighborhoodcount;
+# dataFrame = pd.read_sql("select * from \"vw_neighborhoodcount\"", dbConnection);
+df = pd.read_sql("select * from \"vw_millbasin4\"", dbConnection);
+
+pd.set_option('display.expand_frame_repr', False);
+
+# Print the DataFrame
+# print(dataFrame);
+
+# Close the database connection
+#dbConnection.close();
