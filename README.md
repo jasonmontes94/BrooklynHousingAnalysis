@@ -1,8 +1,7 @@
 
 # Brooklyn Housing Analysis
 
-Housing in the contemporary era has always provided a vast and diverse set of data. By looking at housing prices within Brooklyn, New York, we can adequately assess the housing market using a variety of tools.
-
+Housing in the contemporary era has always provided a vast and diverse set of data. By looking at housing prices within Brooklyn, New York, we can adequately assess the housing market using a variety of tools. Brooklyn is the second most expensive borough, after Manhattan. It's also a highly sought after borough to live in. By applying our analysis to Brooklyn's housing market, it may prove useful to similarly assess other housing markets in the US. It may even be useful to use this analysis for future home buyers who are looking to live in fast growing, highly populated, urban areas.
 
 ## Data
 Data used in analysis was Brooklyn property sales from 2003-2017 sourced from kaggle.com by Tommy Wu. Original data was taken from the City of New York and cleaned up to be used for analysis.
