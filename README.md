@@ -30,5 +30,8 @@ We initially chose a Linear Regression model to compare Brooklyn Home prices wit
 ### Dashboard
 Tableau will be used to display a dashboard/story. Google Slides is being used as a placeholder for visualization.
 
+#### Interactive elements
+-Interactive maps generated from zip codes of Brooklyn with heat map overlayed based on building type.
+-Interactive data table showing details of sales and ml learning results with capability of filtering the table based on zip code and neighborhood.
 ## Communication Practices
 We will primarily be using Slack for communication. We will also be using Zoom for group coordination on certain tasks. We are all collaborating on various facets of the project; choosing a dataset, building a database, choosing a machine learning model, connecting the database to the model, as well as updating the GitHub and README have been completed together as a team.
