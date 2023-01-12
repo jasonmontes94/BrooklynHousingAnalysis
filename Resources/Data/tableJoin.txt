@@ -1,0 +1,51 @@
+CREATE TABLE Building_Class (
+	ID BIGSERIAL PRIMARY KEY,
+	building_class CHAR(255));
+	
+INSERT INTO Building_Class (building_class) 
+	select distinct building_class_category from brookly_sales_map;
+	
+select * from Building_Class WHERE building_class = '01 ONE FAMILY HOMES' OR
+	building_class = '02 TWO FAMILY HOMES' OR
+	building_class = '03 THREE FAMILY HOMES';
+
+CREATE VIEW vw_residential AS SELECT neighborhood,
+		building_class_category,
+		tax_class,
+		easement,
+		address,
+		residential_units,
+		gross_sqft,
+		year_built,
+		cast(replace(sale_price,',','')::numeric as integer) as saleprice,
+		cd,
+		ct2010,
+		cb2010,
+		schooldist,
+		address1,
+		year_of_sale FROM Brookly_Sales_Map
+	INNER JOIN Building_Class ON Brookly_Sales_Map.building_class_category = Building_Class.Building_Class
+	WHERE building_class.ID = 38 or building_class.ID = 64 or building_class.ID = 85;
+	
+	
+	CREATE VIEW vw_wmsburgsouth AS 
+	SELECT neighborhood,
+		building_class_category,
+		tax_class,
+		easement,
+		address,
+		residential_units,
+		gross_sqft,
+		year_built,
+		cast(replace(sale_price,',','')::numeric as integer) as saleprice,
+		cd,
+		ct2010,
+		cb2010,
+		schooldist,
+		address1,
+		year_of_sale
+	FROM brookly_sales_map
+	WHERE neighborhood='WILLIAMSBURG-SOUTH' 
+		and (left(building_class_category,2)='01'
+		or left(building_class_category,2)='02'
+		or left(building_class_category,2)='03');
