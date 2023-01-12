@@ -16,6 +16,9 @@ Data used in analysis was Brooklyn property sales from 2003-2017 sourced from ka
 
 ## Technologies Used
 
+### Google Slides Presentation
+[Brooklyn Housing Analysis](https://docs.google.com/presentation/d/1S5SWDg1g-fo5eKKniRpoEzsBGJHBH_mhhbNbJsAG0nc/edit?usp=sharing).
+
 ### Data Cleaning and Analysis
 Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python and Plotly.
 
@@ -50,5 +53,4 @@ Tableau will be used to display a dashboard/story. Google Slides is being used a
 ## Communication Practices
 We will primarily be using Slack for communication. We will also be using Zoom for group coordination on certain tasks. We are all collaborating on various facets of the project; choosing a dataset, building a database, choosing a machine learning model, connecting the database to the model, as well as updating the GitHub and README have been completed together as a team.
 
-#### Links
-[Google Slides Presentation](https://docs.google.com/presentation/d/1S5SWDg1g-fo5eKKniRpoEzsBGJHBH_mhhbNbJsAG0nc/edit?usp=sharing).
+
