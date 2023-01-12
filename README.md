@@ -49,3 +49,6 @@ Tableau will be used to display a dashboard/story. Google Slides is being used a
 -Interactive data table showing details of sales and ml learning results with capability of filtering the table based on zip code and neighborhood.
 ## Communication Practices
 We will primarily be using Slack for communication. We will also be using Zoom for group coordination on certain tasks. We are all collaborating on various facets of the project; choosing a dataset, building a database, choosing a machine learning model, connecting the database to the model, as well as updating the GitHub and README have been completed together as a team.
+
+#### Links
+[Google Slides Presentation](https://docs.google.com/presentation/d/1S5SWDg1g-fo5eKKniRpoEzsBGJHBH_mhhbNbJsAG0nc/edit?usp=sharing).
