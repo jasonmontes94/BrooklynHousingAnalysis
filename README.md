@@ -9,7 +9,7 @@ Data used in analysis was Brooklyn property sales from 2003-2017 sourced from ka
 ## Research Questions
 
 -   Can we predict future home prices in Brooklyn based on the year that the home was bought?
--   Does square footage of Brooklyn homes durastically effect the price of the home?
+-   Does square footage of Brooklyn homes drastically effect the price of the home?
 -   How do the neighborhoods compare in pricing within Brooklyn?
 -   How have prices fluctuated within a specific range of years?
 -   Are there any other factors that contribute to changes in housing prices?
@@ -55,7 +55,11 @@ Tableau will be used to display a dashboard/story. Google Slides is being used a
 
 #### Interactive elements
 -Interactive maps generated from zip codes of Brooklyn with heat map overlayed based on building type.
+
 -Interactive data table showing details of sales and ml learning results with capability of filtering the table based on zip code and neighborhood.
+
+![heatmap.png](/Resources/Images/heatmap.png)
+
 ## Communication Practices
 We will primarily be using Slack for communication. We will also be using Zoom for group coordination on certain tasks. We are all collaborating on various facets of the project; choosing a dataset, building a database, choosing a machine learning model, connecting the database to the model, as well as updating the GitHub and README have been completed together as a team.
 
