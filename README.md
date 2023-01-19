@@ -1,3 +1,4 @@
+![brooklyn_bridge.jpeg](/Resources/Images/brooklyn_bridge.jpeg)
 # Brooklyn Housing Analysis
 
 Housing markets in the contemporary era provide a vast, diverse, and highly relatable set of data for beginners to work with. By looking at housing prices within Brooklyn, New York, we can adequately assess the housing market using a variety of tools. Brooklyn is the second most expensive borough, after Manhattan, and it also has a high residential turnaround. Creating a model based on the housing market in Brooklyn could be an invaluable tool. It may also prove useful to apply what we learn to assess other housing markets in the US, especially to home buyers who are looking to live in fast growing, highly populated, urban areas.
