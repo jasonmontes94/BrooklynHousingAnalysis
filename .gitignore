@@ -1,6 +1,8 @@
 # Byte-compiled / optimized / DLL files
+# test
 .DS_Store
 DS_Store
+Resources/.DS_Store
 __pycache__/
 *.py[cod]
 *$py.class
@@ -130,3 +132,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.DS_Store
