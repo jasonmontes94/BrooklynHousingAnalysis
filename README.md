@@ -24,6 +24,13 @@ Data used in analysis was Brooklyn property sales from 2003-2017 sourced from ka
 
 Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python and Plotly.
 
+#### Data Cleaning: Excel / Pandas / Python
+We used the pandas library to clean the data. First, we dropped any columns that were irrelevant or couldn't be interpreted. Next, we removed any rows with null values to ensure that the data was complete and accurate. After that, we built a helper script specifically to target the 'sale_price' column and identify and remove any outliers. ![helper.png](/Resources/Images/helper.png)
+This helped to ensure that the data in the 'sale_price' column was accurate and consistent, which is important for any further analysis or modeling that will be done. Finally, we made sure that all columns were of the correct data type, turning objects into integers. This ensures that we can use the data correctly in any further analysis or modeling.
+
+#### Data Analysis
+
+
 ### Database Storage
 
 Postgres(SQL) is the database we intend to use.
