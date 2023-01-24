@@ -42,9 +42,21 @@ SciKitLearn is the machine learning library we'll be using to create a classifie
 
 We initially chose a Linear Regression model. The benefit of using a linear regression model is that it is easy to implement and computationally inexpensive. It can also be used to predict future values based on historical data. Linear regression can provide a good starting point for more complex models. However, it also makes strong assumptions about the data, such as linearity and equal variances of errors. If these assumptions are not met, the model may not be accurate. It also may not be able to capture complex relationships in the data. In addition, if you have a small data set or you have outliers in your data, a linear regression model can be affected and might not give accurate results.
 
-We began by creating several plots in a jupyter notebook with plotly. We compared simple variables such as zip code and year of sale to the sale price of all the homes in the dataset.
+In order to improve the efficacy of using a linear regression model, we chose five different methods:
 
-Next, we decided to begin training our model with these preliminary features in order to predict the sale price, sale price being what we are testing on:
+* Ordinary Least Squares: used to predict a continuous target variable based on one or more input features.
+
+* Ridge: similar to an OLS (Ordinary Least Squares) model, but it adds a penalty term to the cost function that is being optimized. The penalty term is a multiple of the sum of the squares of the coefficients, which helps to shrink the coefficients towards zero and reduce overfitting.
+
+* Lasso: similar to Ridge regression, but it uses a different penalty term in the cost function. Instead of a sum of squares of the coefficients, Lasso uses the sum of the absolute values of the coefficients, which helps to shrink some of the coefficients all the way to zero, effectively selecting a subset of the input features for the model.
+
+* Bayesian: The model parameters are treated as random variables and are assigned prior probability distributions. These prior distributions are then updated using the data to give the posterior probability distributions. The posterior distributions can then be used to make predictions about new data.
+
+* Elastic Net: It is a combination of Ridge and Lasso regularization methods, which means it adds both L1 (absolute values of the coefficients) and L2 (squares of the coefficients) penalty terms to the cost function that is being optimized.
+
+To cover our bases, we wanted to include other models to compare to the linear regression models. After researche, we decided to try a Random Forest and XGBoost models due to them being very common in housing analyses. Random Forest models consists of a collection of decision trees, where each tree is trained on a different random subset of the training data. In contrast, XGBoost is specifically designed for decision tree-based models and it uses a technique called gradient boosting to iteratively improve the model's accuracy by focusing on the misclassified examples in the training data.
+
+Next, we decided to begin training our model with these features in order to predict the sale price, sale price being what we are testing on:
 
 * block
 * zip_code
@@ -52,9 +64,31 @@ Next, we decided to begin training our model with these preliminary features in 
 * year_built
 * sale_price
 * SchoolDist
-* YearBuilt
+* year_of_sale
+* NumFloors
+* Council
+* Garage Area
 
-We chose these features as they initially seemed easy to incorporate with our linear regression model, as well as give us a better understanding of the relationships within our dataset. 
+We chose these features due to feature importance, provided by XGBoosts library. We created a correlation matrix to better visualize the relationships, both are seen below:
+
+![featureimportances.png](Resources/Images/featureimportances.png)
+*Feature Importances*
+
+![heatmap.png](Resources/Images/heatmap.png)
+*Correlation Matrix of features*
+
+After training the model on Sale Price in the data set, we achieved these results:
+
+![rsquared.png](Resources/Images/rsquared.png)
+
+XGBoost seems to be the most accurate model to predict sales prices based on the recommended features. XGBoost has several key features that make it a popular choice among practitioners as well:
+
+* It can handle missing values, categorical features and large datasets efficiently.
+* It provides parallel computation on a single machine, as well as distributed computation on a cluster of machines.
+* It has built-in regularization to avoid overfitting.
+* It provides a feature importance score which can be used for feature selection.
+
+XGBoost is widely used in many applications such as, Kaggle competitions, recommendation systems, and natural language processing. It is particularly popular in kaggle competitions because it is designed to be highly efficient and accurate, which makes it a top choice for building models with high predictive power.
 
 ### Dashboard
 
