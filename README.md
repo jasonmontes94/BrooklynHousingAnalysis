@@ -60,7 +60,7 @@ We chose these features as they initially seemed easy to incorporate with our li
 
 Tableau will be used to display a dashboard/story. Google Slides is being used as a placeholder for visualization.
 
-[**Tableau Public Link**](https://public.tableau.com/app/profile/chase.weaver6108/viz/BrooklynHomeAnalysis/practicemap?publish=yes)
+[**Tableau Public Link**](https://public.tableau.com/views/BrooklynHomeAnalysis/BrooklynHomesDashboardFinal?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 #### Interactive elements
 -Interactive maps generated from zip codes of Brooklyn with heat map overlayed based on building type.
