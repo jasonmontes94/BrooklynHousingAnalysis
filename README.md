@@ -9,11 +9,11 @@ Data used in analysis was Brooklyn property sales from 2003-2017 sourced from ka
 
 ## Research Questions
 
--   Can we predict future home prices in Brooklyn based on the year that the home was bought?
+-   Can we predict future home prices in Brooklyn based on the year that the home was built?
 -   Does square footage of Brooklyn homes drastically effect the price of the home?
--   How do the neighborhoods compare in pricing within Brooklyn?
--   How have prices fluctuated within a specific range of years?
 -   Are there any other factors that contribute to changes in housing prices?
+-   How have prices fluctuated within a specific range of years?
+-   How do the neighborhoods compare in pricing within Brooklyn?
 
 ## Technologies Used
 
